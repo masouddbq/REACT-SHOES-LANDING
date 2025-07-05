@@ -1,0 +1,7 @@
+@import './fonts.css';
+
+
+* {
+    font-family: "pinar";
+    direction: rtl;
+}

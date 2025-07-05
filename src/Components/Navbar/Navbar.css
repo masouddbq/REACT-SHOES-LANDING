@@ -1,0 +1,77 @@
+.tag-hover{
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.tag-hover::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background-color: #0118D8;
+    transition: width 0.6s ease;
+}
+
+.tag-hover:hover::before{
+    width: 100%;
+}
+
+.tag-hover:hover{
+    scale: 1.05;
+    color: #0118D8;
+}
+
+/* Comprehensive MUI Icon Fixes */
+.MuiSvgIcon-root,
+[class*="MuiSvgIcon"],
+svg[class*="Mui"] {
+    color: inherit !important;
+    fill: currentColor !important;
+    stroke: currentColor !important;
+}
+
+/* Override any global styles that might affect icons */
+*[class*="Mui"] {
+    color: inherit !important;
+    fill: currentColor !important;
+}
+
+/* Specific icon styling */
+.mui-icon {
+    color: #6b7280 !important;
+    fill: #6b7280 !important;
+    font-size: 20px !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.mui-icon:hover {
+    color: #374151 !important;
+    fill: #374151 !important;
+}
+
+/* Force icon colors */
+.mui-icon-blue {
+    color: #3b82f6 !important;
+    fill: #3b82f6 !important;
+}
+
+.mui-icon-red {
+    color: #ef4444 !important;
+    fill: #ef4444 !important;
+}
+
+.mui-icon-green {
+    color: #10b981 !important;
+    fill: #10b981 !important;
+}
+
+/* Override Tailwind text color classes for MUI icons */
+.text-gray-500[class*="Mui"],
+.text-blue-500[class*="Mui"],
+.text-red-500[class*="Mui"] {
+    color: inherit !important;
+    fill: currentColor !important;
+}
