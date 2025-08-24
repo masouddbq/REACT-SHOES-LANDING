@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
+import { Link } from 'react-router-dom';
 
 export default function WomenShoes() {
   const womenShoes = [
@@ -63,6 +64,7 @@ export default function WomenShoes() {
                 {/* Products Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {womenShoes.map((shoe) => (
+                    <Link to={`/women/${shoe.id}`} key={shoe.id}>
                         <div key={shoe.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                             <div className="h-48 bg-gray-200 flex items-center justify-center">
                                 <img 
@@ -80,6 +82,7 @@ export default function WomenShoes() {
                                 </button>
                             </div>
                         </div>
+                    </Link>
                     ))}
                 </div>
             </div>
